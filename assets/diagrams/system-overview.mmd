@@ -1,0 +1,50 @@
+flowchart TB
+  subgraph sources["Source layer"]
+    BS[Balance sheet files]
+    CF[Cash flow statements]
+    BK[Bank statements]
+    PL[Pipeline and revenue]
+    MX[Macro feeds SET FX Gold]
+  end
+
+  subgraph ingest["Ingestion"]
+    PARSER[Parser and OCR]
+    NORM[Account normaliser]
+    TS[Time-series aligner]
+  end
+
+  subgraph engine["Finance Engine"]
+    KPI[KPI aggregator]
+    BS_PANEL[Balance sheet panel]
+    RUN[Runway projector]
+    BANK[Bank scorecard]
+    IDX[Finance indices]
+  end
+
+  subgraph surface["Operator surface"]
+    DASH[Dashboard UI]
+    BRIEF[Investor brief]
+    SHEETS[Sheets export]
+  end
+
+  BS --> PARSER
+  CF --> PARSER
+  BK --> NORM
+  PL --> TS
+  MX --> TS
+  PARSER --> NORM
+  NORM --> KPI
+  NORM --> BS_PANEL
+  TS --> RUN
+  NORM --> BANK
+  KPI --> IDX
+  BS_PANEL --> IDX
+  RUN --> IDX
+  BANK --> IDX
+  KPI --> DASH
+  BS_PANEL --> DASH
+  RUN --> DASH
+  BANK --> DASH
+  IDX --> DASH
+  DASH --> BRIEF
+  DASH --> SHEETS
