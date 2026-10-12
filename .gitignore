@@ -1,6 +1,27 @@
+__pycache__/
+*.pyc
+
 .env
 .env.*
 *.pem
 *.key
 secrets/
 credentials/
+
+# Real financial data stays off this public tree.
+# The only committed company figures live in samples/synthetic/.
+# Point tooling at a private directory with FINANCE_DATA_DIR — see README.
+/data/private/
+/private/
+/fixtures/real/
+/assets/screenshots/**
+
+# Spreadsheet and statement exports are real-books shaped.
+# The labelled public fixture is the one CSV exception.
+*.csv
+!/samples/synthetic/company-snapshot.csv
+*.xlsx
+*.xls
+*.ods
+**/*bank-statement*
+**/*ledger*

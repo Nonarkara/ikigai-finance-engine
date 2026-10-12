@@ -1,0 +1,23 @@
+field,value
+data_classification,SYNTHETIC_SAMPLE
+label,SYNTHETIC SAMPLE — invented round figures for the public tree. Not a real company. Not a source-dataset extract.
+company_name,"SYNTHETIC SAMPLE Co., Ltd."
+currency,THB
+cash,100000
+monthly_net_burn,200000
+runway_months,0.5
+revenue,3000000
+pipeline,4000000
+monthly_inflows,100000
+monthly_outflows,300000
+assets,1000000
+liabilities,2000000
+equity,-1000000
+registered_capital,2000000
+retained_earnings,-3000000
+suggested_raise_for_12_months,2300000
+cash_zero,sample month 1 — not a calendar date
+bank_green,1
+bank_amber,1
+bank_red,2
+macro_note,"Placeholder round numbers, not a market quote."

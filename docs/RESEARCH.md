@@ -46,7 +46,7 @@ SMEs in Thailand often maintain 2–3 bank relationships with uneven information
 2. **Benchmark comparison** — operator vs sector median where public benchmarks exist
 3. **Risk flags** — explicit callouts (negative equity, overdraft utilisation, covenant proximity)
 
-The traffic-light summary (2 green · 1 amber · 5 red in the demo) is deliberately blunt — operators need blunt when time is short.
+The traffic-light summary in the public synthetic sample (1 green · 1 amber · 2 red) is deliberately blunt — operators need blunt when time is short. Those lights are invented.
 
 This is **not** a credit rating agency substitute. It is an **internal decision surface** for founders and advisors.
 
@@ -61,27 +61,27 @@ The prototype names five indices. Each is a **compressed view** of multiple inpu
 
 Intent: measure whether financial structure supports stated strategic direction, or whether cash is funding drift (headcount without revenue motion, asset accumulation without utilisation).
 
-Demo label in screenshot: **45/100 · LOW LEVERAGE**
+Synthetic sample: **20/100 · SAMPLE LOW**
 
 ### Lean (operating discipline)
 Intent: burn efficiency relative to revenue and pipeline motion. A company can be "lean" in headcount but not in cash if collections lag.
 
-Demo label: **46/100 · STRATEGIC**
+Synthetic sample: **30/100 · SAMPLE WATCH**
 
 ### Zero (runway horizon)
 Intent: months-to-cash-zero framed as an index rather than a raw decimal. Makes runway comparable across companies of different sizes.
 
-Demo label: **28/100 · INDEFINITE** *(ironic label in demo — reflects index semantics, not optimism)*
+Synthetic sample: **10/100 · SAMPLE SHORT**. A short-horizon band describes the fixture's runway arithmetic, not a forecast.
 
 ### Default (default-risk proximity)
 Intent: debt service capacity vs available cash and near-term obligations. Proximity to default events, not prediction of default.
 
-Demo label: **1/100 · DEFAULT RISK**
+Synthetic sample: **20/100 · SAMPLE WATCH**
 
 ### Solvency (structural distress)
 Intent: equity position, liability structure, asset quality — the slow signals. When solvency reads distress, runway math is urgent in a different way.
 
-Demo label: **0/100 · DISTRESS**
+Synthetic sample: **10/100 · SAMPLE DISTRESS**
 
 ### Approach (not formula)
 Indices are composed from **normalised sub-scores** across balance sheet, cash, bank, and pipeline modules. Weights are calibration targets under active research — not published here because they are still being validated against anonymised case studies.
@@ -103,16 +103,18 @@ The prototype includes Thai-language chrome (เครื่องมือก�
 
 ---
 
-## Anonymised demonstration data
+## Public sample (synthetic)
 
-**ABC Company Limited — Startup (7yr)** in the screenshot is entirely fictitious:
+The figures below are **invented** for this public tree. They are round, labelled `SYNTHETIC_SAMPLE` in [`../samples/synthetic/company-snapshot.json`](../samples/synthetic/company-snapshot.json), and drawn on [`../samples/synthetic/dashboard-overview.png`](../samples/synthetic/dashboard-overview.png). They are not a client, not a filing, and not a copy of any source-dataset screenshot that used to be in this repository.
 
-- Registered capital ฿7,500,000 — demo figure
-- Cash ฿43,181.7 vs burn ฿350,970/mo — deliberately stressed runway (0.1 mo) to show distress UI
-- Negative equity ฿-6.26M — triggers bank scorecard flags
-- Pipeline ฿14.72M vs revenue ฿10.02M — shows forward/backward tension
+**SYNTHETIC SAMPLE Co., Ltd.**
 
-These numbers exist to **stress-test the interface**, not to model a real client.
+- Registered capital ฿2,000,000, retained earnings ฿-3,000,000, equity ฿-1,000,000
+- Assets ฿1,000,000 = liabilities ฿2,000,000 + equity ฿-1,000,000
+- Cash ฿100,000 vs burn ฿200,000/mo — runway 0.5 months, so the distress reading still has a shape
+- Pipeline ฿4,000,000 vs revenue ฿3,000,000
+
+Real books do not belong in this file. Point the loader at a private directory with `FINANCE_DATA_DIR` (see the README). Do not paste figures back out of git history.
 
 ---
 

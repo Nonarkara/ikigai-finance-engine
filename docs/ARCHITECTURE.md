@@ -94,7 +94,7 @@ Horizontal bar + tabular breakdown. The bar answers *is it balanced?*; the table
 Traffic-light summary (green / amber / red) across credit standing, benchmark comparison, and explicit risk flags (e.g. negative equity, overdraft proximity). Compares operator position to sector benchmarks where available.
 
 ### Finance indices sidebar
-Composite 0–100 scores with human-readable labels (LOW LEVERAGE, STRATEGIC, INDEFINITE, DEFAULT RISK, DISTRESS). Each index reads from a different subset of normalised inputs; see [`RESEARCH.md`](RESEARCH.md).
+Composite 0–100 scores with human-readable band labels. The public sample uses invented `SAMPLE …` bands. Each index reads from a different subset of normalised inputs; see [`RESEARCH.md`](RESEARCH.md).
 
 ### Macro sidebar
 External context only — SET index, USD/THB, gold. Not predictive; prevents the operator from reading cash runway in a vacuum.
@@ -106,7 +106,7 @@ External context only — SET index, USD/THB, gold. Not predictive; prevents the
 | Aspect | Status |
 |--------|--------|
 | Public URL | None — development stage |
-| Data | Mock / anonymised demo only in public materials |
+| Data | Public tree ships the labelled synthetic sample only. Real books stay in `FINANCE_DATA_DIR` or gitignored `data/private/`. |
 | Auth | Not documented here |
 | Multi-tenant | Design target; not public |
 
@@ -116,9 +116,10 @@ Production deployments, if any, remain under client engagement and are **not rep
 
 ## What this repo omits
 
-- Application source code
+- Application source code for the finance engine (this tree has a sample loader and a unit test only)
 - Database schemas with real rows
 - API endpoint definitions with live keys
 - Exact index weighting formulas under active research
+- Source-dataset screenshots and client figures (removed from the tree; do not re-add them)
 
 Those belong in private development environments. This repo is the **research and education layer** — enough to understand the problem, the architecture, and the interface intent.
