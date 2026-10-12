@@ -1,0 +1,51 @@
+{
+  "data_classification": "SYNTHETIC_SAMPLE",
+  "label": "SYNTHETIC SAMPLE — invented round figures for the public tree. Not a real company. Not a source-dataset extract.",
+  "company_name": "SYNTHETIC SAMPLE Co., Ltd.",
+  "currency": "THB",
+  "kpis": {
+    "cash": 100000,
+    "monthly_net_burn": 200000,
+    "runway_months": 0.5,
+    "revenue": 3000000,
+    "pipeline": 4000000
+  },
+  "cash_flow": {
+    "monthly_inflows": 100000,
+    "monthly_outflows": 300000
+  },
+  "balance_sheet": {
+    "assets": 1000000,
+    "liabilities": 2000000,
+    "equity": -1000000,
+    "registered_capital": 2000000,
+    "retained_earnings": -3000000
+  },
+  "runway": {
+    "suggested_raise_for_12_months": 2300000,
+    "cash_zero": "sample month 1 — not a calendar date"
+  },
+  "bank_scorecard": {
+    "summary": {"green": 1, "amber": 1, "red": 2},
+    "items": [
+      {"name": "Sample Bank North", "light": "green"},
+      {"name": "Sample Bank South", "light": "amber"},
+      {"name": "Sample overdraft flag", "light": "red"},
+      {"name": "Sample equity flag", "light": "red"}
+    ],
+    "note": "Invented sample lights. Not a real bank relationship."
+  },
+  "indices": [
+    {"name": "Ikigai", "score": 20, "band": "SAMPLE LOW"},
+    {"name": "Lean", "score": 30, "band": "SAMPLE WATCH"},
+    {"name": "Zero", "score": 10, "band": "SAMPLE SHORT"},
+    {"name": "Default", "score": 20, "band": "SAMPLE WATCH"},
+    {"name": "Solvency", "score": 10, "band": "SAMPLE DISTRESS"}
+  ],
+  "macro": {
+    "note": "Placeholder round numbers, not a market quote.",
+    "set_index": 1000.0,
+    "usd_thb": 30.0,
+    "gold_thb_per_oz": 40000
+  }
+}
